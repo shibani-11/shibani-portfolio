@@ -1,0 +1,76 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-bottom: 1px solid #eaeaea;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.projects, .skills-list {
+    display: grid;
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #eaeaea;
+    transition: 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #ccc;
+}
+
+.skills-list span {
+    background: #eee;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
