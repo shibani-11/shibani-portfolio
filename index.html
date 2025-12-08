@@ -7,102 +7,218 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Two-column About layout */
+        .about-wrapper {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .about-text {
+            flex: 1.5;
+            min-width: 280px;
+        }
+        .about-img-wrapper {
+            flex: 1;
+            text-align: right;
+            min-width: 250px;
+        }
+        .about-img-wrapper img {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+        ul {
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- HEADER SECTION -->
+    <!-- HERO SECTION -->
     <header class="hero">
         <div class="hero-content">
             <h1>Shibani Kumar</h1>
-            <p class="subtitle">AI/ML Engineer • Data Scientist • LLM Workflow Developer</p>
+            <p class="subtitle">Data Engineer → AI/ML Engineer | LLMs • GenAI • MLOps</p>
 
             <div class="social-links">
-                <a href="https://linkedin.com/in/shibani-kumar" target="_blank">LinkedIn</a>
-                <a href="https://github.com/shibani-11" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/Shibani-Kumar11" target="_blank">LinkedIn</a>
+                <a href="https://githubgithub.com/shibani-11" target="_blank">GitHub</a>
                 <a href="mailto:shibanik11@gmail.com">Email</a>
             </div>
         </div>
     </header>
 
-    <!-- NAVIGATION TABS -->
+    <!-- NAVIGATION -->
     <nav class="navbar">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#research">Research</a>
+        <a href="#awards">Awards</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section">
         <h2>About Me</h2>
-        <p>
-            I'm a graduate AI/ML engineer specializing in building intelligent systems that combine
-            machine learning, LLMs, retrieval pipelines, and automation workflows.  
-            Passionate about agentic AI, scalable ML solutions, and cloud-deployed models.
-        </p>
-        <img src="assets/profile.jpg" class="profile-img" alt="Shibani">
-    </section>
 
-    <section id="skills" class="section light">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <span>Python</span><span>SQL</span><span>R</span><span>JavaScript</span>
-            <span>scikit-learn</span><span>XGBoost</span><span>LLMs</span><span>SHAP</span>
-            <span>LangChain</span><span>vLLM</span><span>Azure OpenAI</span><span>HuggingFace</span>
-            <span>Spark</span><span>Hadoop</span><span>MySQL</span><span>GCP</span>
+        <div class="about-wrapper">
+
+            <!-- LEFT TEXT -->
+            <div class="about-text">
+                <p>
+                    I am Shibani Kumar, a driven and detail-oriented graduate student specializing in 
+                    Information Technology & Management at The University of Texas at Dallas. With a strong 
+                    background in data engineering and industry experience at Moolya Software Technologies 
+                    and Accenture, I focus on building scalable systems that combine machine learning, LLMs, 
+                    automation, retrieval pipelines, and cloud architectures.
+                </p>
+
+                <p>
+                    I am a <strong>Menka Hemrajani Scholarship recipient</strong>, an 
+                    <strong>ITM Impact Award honoree</strong>, and a current 
+                    <strong>Nash Fellowship Candidate</strong> at UT Dallas — distinctions that reflect my 
+                    academic excellence, leadership, and contributions to the ITM community.
+                </p>
+
+                <h3>Current Focus:</h3>
+
+                <ul>
+                    <li>Advancing expertise in LLM fine-tuning, RAG pipelines, and agentic AI systems.</li>
+                    <li>Building scalable ML/LLM systems using PyTorch, HuggingFace, LangChain, and vLLM.</li>
+                    <li>Optimizing end-to-end machine learning workflows for real-world deployment.</li>
+                    <li>Experimenting with advanced GenAI techniques for summarization, moderation, and automation.</li>
+                    <li>Applying MLOps practices: experiment tracking, evaluation, and pipeline orchestration.</li>
+                    <li>Enhancing ETL automation and big-data workflows using Spark, PySpark, and distributed systems.</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="about-img-wrapper">
+                <img src="assets/profile.jpg" alt="Shibani">
+            </div>
+
         </div>
     </section>
 
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="section light">
+        <h2>Skills</h2>
+
+        <div class="skills-grid">
+            <span>Python</span><span>SQL</span><span>R</span><span>GitHub</span>
+
+            <span>PyTorch</span><span>HuggingFace Transformers</span><span>LangChain</span>
+            <span>LLM Fine-Tuning</span><span>TensorFlow</span><span>Scikit-learn</span>
+            <span>vLLM</span><span>GenAI</span><span>W&B</span>
+
+            <span>ETL Pipelines</span><span>Spark</span><span>PySpark</span>
+            <span>Hadoop</span><span>AWS DynamoDB</span>
+
+            <span>Pandas</span><span>NumPy</span><span>Matplotlib</span>
+            <span>Seaborn</span><span>Power BI</span><span>Tableau</span>
+
+            <span>Kubernetes</span><span>Docker</span><span>Flask</span>
+            <span>Streamlit</span><span>CI/CD</span><span>Azure</span><span>GCP</span>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section light">
+        <h2>Experience</h2>
+
+        <h3>Moolya Software Technologies — Senior Data Engineer</h3>
+        <p>(Aug 2020 – Jun 2022)</p>
+        <ul>
+            <li>Developed ETL pipelines in Python and SQL for SaaS marketing data (Google Ads, FB Ads, Spotify), improving performance by 15%.</li>
+            <li>Built Tableau dashboards supporting $3M+ accounts and reducing reporting time.</li>
+            <li>Mentored junior engineers, improving onboarding timelines and workflow reliability.</li>
+        </ul>
+
+        <h3>Accenture — Software Engineer</h3>
+        <p>(Dec 2017 – Aug 2020)</p>
+        <ul>
+            <li>Automated PySpark and Python workflows for AT&T’s order pipeline, reducing manual workload by 30%.</li>
+            <li>Improved customer behavior modeling and conversion tracking by 25% using data analytics and machine learning.</li>
+        </ul>
+    </section>
+
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
         <h2>Projects</h2>
 
         <div class="project-grid">
 
             <div class="project-card">
-                <h3>Driver Risk Analytics</h3>
-                <p>ML pipeline predicting high-risk fleet drivers using telematics and SHAP insights.</p>
-                <p class="tech">Python • XGBoost • SHAP</p>
+                <h3>AI-Powered Text Summarizer</h3>
+                <p>Developed an LLM-based summarization system using Llama-3.1-8B, Streamlit UI, and SambaNova API. Used by 100+ users.</p>
+                <p class="tech">Llama-3.1 • PyTorch • Streamlit • Flask</p>
             </div>
 
             <div class="project-card">
-                <h3>IBM HR Attrition</h3>
-                <p>Prediction system using EDA, feature engineering, PCA, and ML model tuning.</p>
-                <p class="tech">Logistic Regression • RandomForest</p>
+                <h3>Loan Default Prediction</h3>
+                <p>Built ML models (LogReg, RF, XGBoost) achieving 93% ROC-AUC and 0.89 F1-score using optimized hyperparameters.</p>
+                <p class="tech">XGBoost • sklearn • GridSearchCV</p>
             </div>
 
             <div class="project-card">
-                <h3>Cardiovascular Risk Prediction</h3>
-                <p>Multi-model comparison with SHAP explainability and performance evaluation.</p>
-                <p class="tech">sklearn • SHAP</p>
+                <h3>LLM-Based Content Moderation System</h3>
+                <p>Fine-tuned LLMs with LoRA/QLoRA on the Jigsaw toxicity dataset. Achieved 4× faster inference using vLLM.</p>
+                <p class="tech">HuggingFace • LoRA • QLoRA • W&B • vLLM</p>
             </div>
 
             <div class="project-card">
-                <h3>Subfinity</h3>
-                <p>Subscription management dashboard with reminders and analytics.</p>
-                <p class="tech">Python • Streamlit</p>
+                <h3>ETL Pipelines for SaaS Data</h3>
+                <p>Automated ETL workflows supporting analytics for multiple marketing platforms.</p>
+                <p class="tech">Python • SQL • Tableau</p>
             </div>
 
         </div>
     </section>
 
+    <!-- RESEARCH SECTION -->
     <section id="research" class="section light">
         <h2>Research</h2>
-        <p>
-            MOOSE-CHEM — Agentic LLM pipeline for hypothesis generation.  
-            Includes evolutionary refinement, retrieval-augmented inspiration,
-            multimodal reasoning, and structured scoring metrics such as hit-ratio and matched score. 
-        </p>
+
+        <p><strong>LLM-Based AI System Development — Research Worker, UT Dallas</strong> <br>(May 2025 – Present)</p>
+
+        <ul>
+            <li>Developed agentic LLM pipelines using LangChain + LangGraph for hypothesis generation and literature reasoning.</li>
+            <li>Built RAG pipelines using FAISS + hybrid retrieval across 20,000+ academic documents.</li>
+            <li>Specialized in semantic chunking, hypothesis scoring, structured evaluation, and retrieval optimization.</li>
+        </ul>
     </section>
 
+    <!-- AWARDS SECTION -->
+    <section id="awards" class="section light">
+        <h2>Awards & Honors</h2>
+
+        <ul>
+            <li><strong>Menka Hemrajani Scholarship Recipient</strong> — UT Dallas</li>
+            <li><strong>ITM Impact Award Recipient</strong> — UT Dallas</li>
+            <li><strong>Nash Fellowship Candidate</strong> — UT Dallas</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section">
         <h2>Contact</h2>
+
         <p>Email: <a href="mailto:shibanik11@gmail.com">shibanik11@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/shibani-kumar">linkedin.com/in/shibani-kumar</a></p>
+        <p>Phone: +1 619-648-0254</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/Shibani-Kumar11">linkedin.com/in/Shibani-Kumar11</a></p>
         <p>GitHub: <a href="https://github.com/shibani-11">github.com/shibani-11</a></p>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         © 2025 Shibani Kumar — All Rights Reserved
     </footer>
