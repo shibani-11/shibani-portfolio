@@ -31,7 +31,7 @@ h1, h2 {
 
 .hero {
     position: relative;
-    height: 95vh;
+    height: 65vh;
     background: black;
     color: white;
     display: flex;
