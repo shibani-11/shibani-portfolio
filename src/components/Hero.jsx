@@ -61,17 +61,17 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <h1 
-          className="font-hero text-6xl md:text-8xl lg:text-[96px] font-extrabold text-white mb-6 tracking-tight opacity-0 drop-shadow-[0_0_30px_rgba(37,99,235,0.5)]"
+          className="font-hero text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 tracking-tight opacity-0 drop-shadow-[0_0_30px_rgba(37,99,235,0.5)]"
           style={{ animation: 'fadeInUp 0.6s ease-out 0.2s forwards' }}
         >
           Hello, I'm Shibani Kumar
         </h1>
         
         <p 
-          className="text-xl md:text-2xl text-gray-400 mb-8 opacity-0"
+          className="text-lg md:text-xl text-gray-400 mb-8 opacity-0 max-w-2xl mx-auto"
           style={{ animation: 'fadeInUp 0.6s ease-out 0.3s forwards' }}
         >
-          {portfolioData.title}
+          I am an AI and Machine Learning enthusiast, building intelligent systems that learn from data, power predictions, and drive smarter decisions.
         </p>
         
         <div 
