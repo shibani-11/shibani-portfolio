@@ -1,4 +1,7 @@
+import { useEffect, useMemo } from 'react';
 import { portfolioData } from '../data/portfolio';
+import Particles from 'react-tsparticles';
+import { loadSlim } from 'tsparticles-slim';
 
 const Hero = () => {
   const scrollToSection = (sectionId) => {
@@ -8,25 +11,60 @@ const Hero = () => {
     }
   };
 
+  const particlesInit = useMemo(() => {
+    return async (engine) => {
+      await loadSlim(engine);
+    };
+  }, []);
+
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden bg-dark-900">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-dark-700 via-dark-900 to-dark-950" />
+    <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden bg-gradient-to-b from-[#050816] to-[#0B1120]">
+      {/* tsParticles Background */}
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        className="absolute inset-0"
+        options={{
+          fullScreen: { enable: false },
+          background: { color: { value: 'transparent' } },
+          particles: {
+            number: { value: 60, density: { enable: true, area: 800 } },
+            color: { value: '#2563EB' },
+            shape: { type: 'circle' },
+            opacity: { value: 0.5 },
+            size: { value: { min: 1, max: 3 } },
+            links: {
+              enable: true,
+              color: '#2563EB',
+              distance: 150,
+              opacity: 0.3,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 1,
+              direction: 'none',
+              outModes: { default: 'bounce' },
+            },
+          },
+          interactivity: {
+            events: {
+              onHover: { enable: true, mode: 'repulse' },
+            },
+            modes: {
+              repulse: { distance: 100, duration: 0.4 },
+            },
+          },
+        }}
+      />
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p 
-          className="text-accent-400 font-medium mb-4 opacity-0"
-          style={{ animation: 'fadeInUp 0.6s ease-out 0.1s forwards' }}
-        >
-          Hello, I'm
-        </p>
-        
         <h1 
-          className="font-display text-5xl md:text-7xl font-bold text-white mb-4 opacity-0"
+          className="font-hero text-6xl md:text-8xl lg:text-[96px] font-extrabold text-white mb-6 tracking-tight opacity-0 drop-shadow-[0_0_30px_rgba(37,99,235,0.5)]"
           style={{ animation: 'fadeInUp 0.6s ease-out 0.2s forwards' }}
         >
-          {portfolioData.name}
+          Hello, I'm Shibani Kumar
         </h1>
         
         <p 
@@ -44,7 +82,7 @@ const Hero = () => {
             href={portfolioData.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-accent-400 text-accent-400 rounded-lg hover:bg-accent-400/10 transition-all duration-300"
+            className="px-6 py-3 border border-accent-400 text-accent-400 rounded-lg hover:bg-accent-400 hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
             LinkedIn
           </a>
@@ -52,13 +90,13 @@ const Hero = () => {
             href={portfolioData.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-accent-400 text-accent-400 rounded-lg hover:bg-accent-400/10 transition-all duration-300"
+            className="px-6 py-3 border border-accent-400 text-accent-400 rounded-lg hover:bg-accent-400 hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
             GitHub
           </a>
           <a
             href={`mailto:${portfolioData.email}`}
-            className="px-6 py-3 bg-accent-400 text-dark-900 font-medium rounded-lg hover:bg-accent-500 transition-all duration-300"
+            className="px-6 py-3 bg-accent-400 text-white font-medium rounded-lg hover:bg-accent-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
             Get in Touch
           </a>
