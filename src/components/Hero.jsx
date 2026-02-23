@@ -1,5 +1,4 @@
-import { useEffect, useMemo } from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useMemo } from 'react';
 import Particles from 'react-tsparticles';
 import { loadSlim } from 'tsparticles-slim';
 
@@ -79,26 +78,18 @@ const Hero = () => {
           style={{ animation: 'fadeInUp 0.6s ease-out 0.4s forwards' }}
         >
           <a
-            href={portfolioData.linkedin}
+            href="/assets/ShibaniKumar.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border border-[#2563EB] text-[#2563EB] rounded-lg hover:bg-[#2563EB] hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
-            LinkedIn
+            CV
           </a>
           <a
-            href={portfolioData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 border border-[#2563EB] text-[#2563EB] rounded-lg hover:bg-[#2563EB] hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
-          >
-            GitHub
-          </a>
-          <a
-            href={`mailto:${portfolioData.email}`}
+            href="mailto:shibani.kumar@utdallas.edu"
             className="px-6 py-3 bg-[#2563EB] text-white font-medium rounded-lg hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
-            Get in Touch
+            Contact
           </a>
         </div>
       </div>
