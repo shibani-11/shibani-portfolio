@@ -82,7 +82,7 @@ const Hero = () => {
             href={portfolioData.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-accent-400 text-accent-400 rounded-lg hover:bg-accent-400 hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
+            className="px-6 py-3 border border-[#2563EB] text-[#2563EB] rounded-lg hover:bg-[#2563EB] hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
             LinkedIn
           </a>
@@ -90,13 +90,13 @@ const Hero = () => {
             href={portfolioData.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-accent-400 text-accent-400 rounded-lg hover:bg-accent-400 hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
+            className="px-6 py-3 border border-[#2563EB] text-[#2563EB] rounded-lg hover:bg-[#2563EB] hover:text-white transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
             GitHub
           </a>
           <a
             href={`mailto:${portfolioData.email}`}
-            className="px-6 py-3 bg-accent-400 text-white font-medium rounded-lg hover:bg-accent-500 transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
+            className="px-6 py-3 bg-[#2563EB] text-white font-medium rounded-lg hover:bg-[#1D4ED8] transition-all duration-300 hover:shadow-[0_0_20px_rgba(37,99,235,0.5)]"
           >
             Get in Touch
           </a>
@@ -106,7 +106,7 @@ const Hero = () => {
       {/* Scroll indicator */}
       <button
         onClick={() => scrollToSection('about')}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500 hover:text-accent-400 transition-colors duration-300 opacity-0"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-gray-500 hover:text-[#2563EB] transition-colors duration-300 opacity-0"
         style={{ animation: 'fadeIn 1s ease-out 0.8s forwards' }}
       >
         <svg 
