@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react';
 const navItems = [
   { id: 'about', label: 'About' },
   { id: 'skills', label: 'Skills' },
-  { id: 'experience', label: 'Experience' },
   { id: 'projects', label: 'Projects' },
-  { id: 'research', label: 'Research' },
-  { id: 'leadership', label: 'Leadership' },
+  { id: 'education', label: 'Education' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'accomplishments', label: 'Accomplishments' },
+  { id: 'certifications', label: 'Certifications' },
   { id: 'contact', label: 'Contact' },
 ];
 
@@ -35,7 +36,7 @@ const Navigation = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-dark-900/90 backdrop-blur-md border-b border-dark-700' 
+          ? 'bg-[#0A0F1C]/90 backdrop-blur-md border-b border-blue-500/20' 
           : 'bg-transparent'
       }`}
     >
@@ -44,18 +45,18 @@ const Navigation = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-xl font-display font-bold text-white hover:text-accent-400 transition-colors"
+            className="text-xl font-bold text-white hover:text-[#3B82F6] transition-colors"
           >
             SK
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-400 hover:text-accent-400 transition-colors text-sm font-medium"
+                className="text-gray-400 hover:text-[#3B82F6] transition-colors text-sm font-medium"
               >
                 {item.label}
               </button>
@@ -65,7 +66,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-gray-400 hover:text-accent-400 transition-colors"
+            className="md:hidden text-gray-400 hover:text-[#3B82F6] transition-colors"
           >
             <svg 
               className="w-6 h-6" 
@@ -84,12 +85,12 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-dark-800 border-t border-dark-700 py-4">
+          <div className="md:hidden bg-[#0A0F1C] border-t border-blue-500/20 py-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-2 text-gray-400 hover:text-accent-400 hover:bg-dark-700 transition-colors"
+                className="block w-full text-left px-4 py-2 text-gray-400 hover:text-[#3B82F6] hover:bg-white/5 transition-colors"
               >
                 {item.label}
               </button>

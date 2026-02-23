@@ -2,15 +2,16 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Research from './components/Research';
-import Leadership from './components/Leadership';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Accomplishments from './components/Accomplishments';
+import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-900">
+    <div className="min-h-screen bg-[#0A0F1C]">
       <Navigation />
       
       {/* Hero Section */}
@@ -20,10 +21,11 @@ function App() {
       
       <About />
       <Skills />
-      <Experience />
       <Projects />
-      <Research />
-      <Leadership />
+      <Education />
+      <Experience />
+      <Accomplishments />
+      <Certifications />
       <Contact />
     </div>
   );
