@@ -1,3 +1,5 @@
+import ParticlesBackground from './ParticlesBackground';
+
 const skillCategories = [
   {
     name: "Programming",
@@ -57,8 +59,9 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C]">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C] relative">
+      <ParticlesBackground />
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-white text-center">Skills</h2>
         <div className="w-20 h-1 bg-[#3B82F6] mx-auto mt-4 mb-10 rounded" />
         

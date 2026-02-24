@@ -1,11 +1,13 @@
+import ParticlesBackground from './ParticlesBackground';
 import { portfolioData } from '../data/portfolio';
 
 const Experience = () => {
   const { experience } = portfolioData;
 
   return (
-    <section id="experience" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C]">
-      <div className="max-w-4xl mx-auto">
+    <section id="experience" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C] relative">
+      <ParticlesBackground />
+      <div className="max-w-4xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-white text-center">Experience</h2>
         <div className="w-20 h-1 bg-[#3B82F6] mx-auto mt-4 mb-10 rounded" />
         

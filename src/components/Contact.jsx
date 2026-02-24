@@ -1,11 +1,13 @@
+import ParticlesBackground from './ParticlesBackground';
 import { portfolioData } from '../data/portfolio';
 
 const Contact = () => {
   const { name, email, linkedin, github } = portfolioData;
 
   return (
-    <section id="contact" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="contact" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C] relative">
+      <ParticlesBackground />
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl font-bold text-white">Get In Touch</h2>
         <div className="w-20 h-1 bg-[#3B82F6] mx-auto mt-4 mb-10 rounded" />
         

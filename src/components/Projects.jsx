@@ -1,3 +1,4 @@
+import ParticlesBackground from './ParticlesBackground';
 import { portfolioData } from '../data/portfolio';
 
 const projectImages = [
@@ -10,8 +11,9 @@ const Projects = () => {
   const { projects } = portfolioData;
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C]">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C] relative">
+      <ParticlesBackground />
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-4xl font-bold text-white text-center">Projects</h2>
         <div className="w-20 h-1 bg-[#3B82F6] mx-auto mt-4 mb-10 rounded" />
         
@@ -29,11 +31,14 @@ const Projects = () => {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mt-4">{project.title}</h3>
-                <p className="text-[#3B82F6] text-sm mt-1">{project.tech.join(' • ')}</p>
-                <p className="text-gray-400 mt-3 text-sm line-clamp-2">
-                  {project.description}
-                </p>
+                <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.tech.map((tech, i) => (
+                    <span key={i} className="px-3 py-1 bg-[#1E3A5F] text-[#3B82F6] text-xs rounded-full">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

@@ -1,3 +1,5 @@
+import ParticlesBackground from './ParticlesBackground';
+
 const About = () => {
   const highlightKeywords = (text) => {
     const keywords = ['AI', 'Machine Learning', 'Python', 'TensorFlow', 'PyTorch'];
@@ -10,8 +12,9 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-[#0A0F1C] relative">
+      <ParticlesBackground />
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="text-4xl font-bold text-white">About Me</h2>
         <div className="w-20 h-1 bg-[#3B82F6] mx-auto mt-4 mb-10 rounded" />
         
